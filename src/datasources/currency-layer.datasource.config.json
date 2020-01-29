@@ -1,0 +1,21 @@
+{
+  "name": "currencyLayer",
+  "connector": "rest",
+  "options": {
+    "headers": {
+      "accept": "application/json",
+      "content-type": "application/json"
+    }
+  },
+  "operations": [
+    {
+      "template": {
+        "method": "GET",
+        "url": "https://free.currconv.com/api/v7/convert?q={from}_{to}&compact=ultra&apiKey=037de696748ffb87e9d6"
+      },
+      "functions": {
+        "getdata": ["from", "to"]
+      }
+    }
+  ]
+}
